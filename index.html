@@ -40,6 +40,16 @@
       "logo": "https://tucestaparanavidad.es/assets/og-tucesta.jpg",
       "image": "https://tucestaparanavidad.es/assets/og-tucesta.jpg",
       "description": "Cestas, lotes y cajas jamoneras de Navidad para empresas. Proyecto de la Asociación Junior Empresa Prodox.",
+      "slogan": "Cestas y lotes de Navidad para empresas, sin pedido mínimo y personalizadas a tu presupuesto.",
+      "knowsAbout": [
+        "Cestas de Navidad para empresas",
+        "Lotes de Navidad para empresas",
+        "Regalos de empresa de Navidad",
+        "Cestas de Navidad personalizadas",
+        "Lotes jamoneros y cajas jamoneras",
+        "Estuches de vino para regalo de empresa",
+        "Regalos de Navidad para empleados y clientes"
+      ],
       "email": "eduardosotillo.prodox@gmail.com",
       "telephone": "+34633425090",
       "foundingDate": "2023",
@@ -75,6 +85,43 @@
       "name": "TuCesta",
       "inLanguage": "es-ES",
       "publisher": { "@id": "https://tucestaparanavidad.es/#organizacion" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tucestaparanavidad.es/#pagina",
+      "url": "https://tucestaparanavidad.es/",
+      "name": "TuCesta | Cestas y lotes de Navidad para empresas",
+      "description": "Cestas, lotes y cajas jamoneras de Navidad para empresas. Sin pedido mínimo, personalización con tarjeta de felicitación y contenido a medida, y envío a toda España.",
+      "inLanguage": "es-ES",
+      "isPartOf": { "@id": "https://tucestaparanavidad.es/#web" },
+      "about": { "@id": "https://tucestaparanavidad.es/#organizacion" },
+      "mainEntity": { "@id": "https://tucestaparanavidad.es/#servicio" },
+      "primaryImageOfPage": "https://tucestaparanavidad.es/assets/og-tucesta.jpg"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tucestaparanavidad.es/#servicio",
+      "name": "Cestas y lotes de Navidad para empresas",
+      "serviceType": "Regalos de empresa de Navidad",
+      "description": "Cestas, lotes y cajas jamoneras de Navidad para empresas, de todos los presupuestos. Sin pedido mínimo: desde una sola cesta hasta cientos de unidades. Cada lote se personaliza con tarjeta de felicitación y contenido a medida, adaptado al presupuesto y las condiciones del cliente. Envío a toda España antes de las fechas clave y respuesta a presupuestos en menos de 24 horas laborables.",
+      "provider": { "@id": "https://tucestaparanavidad.es/#organizacion" },
+      "areaServed": { "@type": "Country", "name": "España" },
+      "audience": { "@type": "BusinessAudience", "name": "Empresas, pymes y autónomos" },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://tucestaparanavidad.es/#contacto",
+        "servicePhone": "+34633425090",
+        "serviceSmsNumber": "+34633425090"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR",
+        "areaServed": { "@type": "Country", "name": "España" },
+        "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": 1, "unitText": "cesta" },
+        "description": "Presupuesto a medida sin compromiso. No hay pedido mínimo.",
+        "seller": { "@id": "https://tucestaparanavidad.es/#organizacion" }
+      }
     },
     {
       "@type": "FAQPage",

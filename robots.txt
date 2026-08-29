@@ -2,4 +2,67 @@ User-agent: *
 Allow: /
 Disallow: /gracias.html
 
+# Buscadores y asistentes de IA: acceso permitido de forma explícita.
+# (Cada bot solo lee su propio bloque, por eso se repite la regla.)
+
+User-agent: GPTBot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /gracias.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: Claude-User
+Allow: /
+Disallow: /gracias.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /gracias.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /gracias.html
+
+User-agent: Applebot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /gracias.html
+
+User-agent: CCBot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /gracias.html
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /gracias.html
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /gracias.html
+
 Sitemap: https://tucestaparanavidad.es/sitemap.xml
