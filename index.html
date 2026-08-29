@@ -75,6 +75,59 @@
       "name": "TuCesta",
       "inLanguage": "es-ES",
       "publisher": { "@id": "https://tucestaparanavidad.es/#organizacion" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tucestaparanavidad.es/#faq",
+      "inLanguage": "es-ES",
+      "isPartOf": { "@id": "https://tucestaparanavidad.es/#web" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Hay cestas para todos los presupuestos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Trabajamos cestas y lotes de Navidad de todos los precios, desde detalles para grandes plantillas hasta selecciones premium con jamón, vinos de D.O. y dulces artesanos. Incluso puedes combinar distintos presupuestos en un mismo pedido." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tenéis pedido mínimo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No hay pedido mínimo. Preparamos desde una sola cesta de Navidad hasta pedidos de cientos de unidades para toda la plantilla." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo personalizar las cestas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Personalizamos cada lote con una tarjeta de felicitación y un contenido a medida, adaptado a tu presupuesto y a las preferencias de tu empresa." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Con cuánta antelación conviene hacer el pedido?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cuanto antes, mejor. Los pedidos personalizados requieren tiempo de preparación y en plena campaña de Navidad la demanda se concentra en pocas semanas, así que reservar con antelación es la mejor forma de asegurar disponibilidad y entrega a tiempo, en especial en los pedidos personalizados." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hacéis envíos a toda España?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, enviamos cestas y lotes de Navidad para empresas a toda España, con entrega antes de las fechas clave." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo pido un presupuesto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos al correo, llámanos por teléfono o rellena el formulario de contacto, contándonos cuántas cestas necesitas y qué presupuesto manejas. Te respondemos en menos de 24 horas laborables." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué productos incluyen las cestas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Más de 100 referencias entre lotes tradicionales, jamoneros, cajas jamoneras, estuches de vino, baúles y opciones sin gluten, veganas o sin alcohol. Puedes verlas todas en nuestro catálogo." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajáis solo con grandes empresas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Al no haber pedido mínimo, trabajamos igual con autónomos, pymes y grandes empresas. Cada pedido se adapta a tus condiciones." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Parte de la compra apoya alguna causa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Destinamos el 15% del beneficio de la campaña a CESAL, una ONG de ayuda humanitaria en 15 países, y colaboramos con la campaña de ayuda por el terremoto de Venezuela." }
+        }
+      ]
     }
   ]
 }
@@ -205,6 +258,22 @@ h2.gorro{margin:0}
 .cesal h3{font-size:22px;margin-bottom:8px;color:var(--burdeos)}
 .cesal p{font-size:16px;color:#5c443f;margin:0}
 .cesal .porcentaje{font-family:var(--display);font-weight:700;color:var(--rojo-lazo)}
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq{max-width:840px;margin-top:10px}
+.faq-item{border-bottom:1px solid rgba(113,33,42,.16)}
+.faq-item:first-child{border-top:1px solid rgba(113,33,42,.16)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:25px 4px;font-family:var(--display);font-weight:600;font-size:clamp(1.08rem,1.7vw,1.3rem);color:var(--burdeos-hondo);line-height:1.32}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--burdeos)}
+.faq-mas{position:relative;flex:none;width:22px;height:22px;margin-top:4px}
+.faq-mas::before,.faq-mas::after{content:"";position:absolute;background:var(--rojo-lazo);border-radius:2px;transition:transform .3s ease}
+.faq-mas::before{top:9.75px;left:2px;width:18px;height:2.5px}
+.faq-mas::after{top:2px;left:9.75px;width:2.5px;height:18px}
+.faq-item[open] .faq-mas::after{transform:scaleY(0)}
+.faq-respuesta{padding:0 4px 27px;max-width:72ch}
+.faq-respuesta p{font-size:16.5px;color:#5c443f;margin:0}
+.faq-respuesta a{color:var(--rojo-lazo);font-weight:500;text-decoration:underline;text-underline-offset:2px}
 
 /* ---------- Catálogo ---------- */
 .catalogo-cuerpo{display:grid;grid-template-columns:.92fr 1.08fr;gap:70px;align-items:center;margin-top:14px}
@@ -419,6 +488,7 @@ body.sin-scroll{overflow:hidden}
     <nav class="menu" id="menu-principal">
       <a href="#historia">Nuestra historia</a>
       <a href="#catalogo">Ver catálogo</a>
+      <a href="#faq">Preguntas frecuentes</a>
       <a href="#contacto">Contacto</a>
       <a class="boton boton--oscuro" href="#contacto">Pedir presupuesto <span class="glifo" aria-hidden="true">→</span></a>
     </nav>
@@ -524,6 +594,52 @@ body.sin-scroll{overflow:hidden}
   </div>
 </section>
 
+<!-- ======= Preguntas frecuentes ======= -->
+<section class="seccion seccion--hueso" id="faq">
+  <div class="envoltorio">
+    <span class="gorro aparece">Preguntas frecuentes</span>
+    <h2 class="titular aparece">Dudas habituales sobre las cestas de Navidad para empresas</h2>
+    <div class="faq aparece">
+      <details class="faq-item">
+        <summary>¿Hay cestas para todos los presupuestos?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>Sí. Trabajamos cestas y lotes de Navidad de todos los precios, desde detalles para grandes plantillas hasta selecciones premium con jamón, vinos de D.O. y dulces artesanos. Incluso puedes combinar distintos presupuestos en un mismo pedido.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis pedido mínimo?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>No hay pedido mínimo. Preparamos desde una sola cesta de Navidad hasta pedidos de cientos de unidades para toda la plantilla.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo personalizar las cestas?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>Sí. Personalizamos cada lote con una tarjeta de felicitación y un contenido a medida, adaptado a tu presupuesto y a las preferencias de tu empresa.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Con cuánta antelación conviene hacer el pedido?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>Cuanto antes, mejor. Los pedidos personalizados requieren tiempo de preparación y en plena campaña de Navidad la demanda se concentra en pocas semanas, así que reservar con antelación es la mejor forma de asegurar disponibilidad y entrega a tiempo, en especial en los pedidos personalizados.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacéis envíos a toda España?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>Sí, enviamos cestas y lotes de Navidad para empresas a toda España, con entrega antes de las fechas clave.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo pido un presupuesto?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>Escríbenos al correo, llámanos por teléfono o rellena el <a href="#contacto">formulario de contacto</a>, contándonos cuántas cestas necesitas y qué presupuesto manejas. Te respondemos en menos de 24 horas laborables.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué productos incluyen las cestas?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>Más de 100 referencias entre lotes tradicionales, jamoneros, cajas jamoneras, estuches de vino, baúles y opciones sin gluten, veganas o sin alcohol. Puedes verlas todas en <a href="catalogo-tucesta-2026.pdf" target="_blank" rel="noopener">nuestro catálogo</a>.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Trabajáis solo con grandes empresas?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>No. Al no haber pedido mínimo, trabajamos igual con autónomos, pymes y grandes empresas. Cada pedido se adapta a tus condiciones.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Parte de la compra apoya alguna causa?<span class="faq-mas" aria-hidden="true"></span></summary>
+        <div class="faq-respuesta"><p>Sí. Destinamos el 15% del beneficio de la campaña a CESAL, una ONG de ayuda humanitaria en 15 países, y colaboramos con la campaña de ayuda por el terremoto de Venezuela.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ======= Contacto ======= -->
 <section class="seccion seccion--crema" id="contacto">
   <div class="envoltorio">
@@ -609,6 +725,7 @@ body.sin-scroll{overflow:hidden}
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#historia">Nuestra historia</a></li>
             <li><a href="#catalogo">Ver catálogo</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
