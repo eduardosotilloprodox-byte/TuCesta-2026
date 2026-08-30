@@ -39,7 +39,12 @@
       "alternateName": "TuCesta — Regalos, cestas y lotes",
       "url": "https://tucestaparanavidad.es/",
       "logo": "https://tucestaparanavidad.es/assets/og-tucesta.jpg",
-      "image": "https://tucestaparanavidad.es/assets/og-tucesta.jpg",
+      "image": [
+        "https://tucestaparanavidad.es/assets/og-tucesta.jpg",
+        "https://tucestaparanavidad.es/assets/equipo-prodox-india-900.webp",
+        "https://tucestaparanavidad.es/assets/equipo-prodox-costa-rica-900.webp",
+        "https://tucestaparanavidad.es/assets/equipo-prodox-viaje-900.webp"
+      ],
       "description": "Cestas, lotes y cajas jamoneras de Navidad para empresas. Proyecto de la Asociación Junior Empresa Prodox.",
       "slogan": "Cestas y lotes de Navidad para empresas, sin pedido mínimo y personalizadas a tu presupuesto.",
       "knowsAbout": [
@@ -285,6 +290,11 @@ h2.gorro{margin:0}
 .historia-cuerpo{display:grid;grid-template-columns:1fr 1fr;gap:38px 56px;margin-top:8px}
 .historia-cuerpo p{color:#5c443f}
 
+/* Fotos del equipo: fila justificada, cada foto conserva su proporción real (sin recortes) */
+.galeria-equipo{display:flex;gap:16px;margin-top:52px}
+.galeria-equipo figure{margin:0;flex:var(--ratio) 1 0;border-radius:var(--radio);overflow:hidden;background:rgba(200,178,152,.18);box-shadow:0 12px 30px rgba(78,21,15,.09)}
+.galeria-equipo img{display:block;width:100%;height:auto;aspect-ratio:var(--ratio);object-fit:cover}
+
 .cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(78,21,15,.14);border-radius:var(--radio);overflow:hidden;margin:56px 0 64px}
 .cifra{background:var(--hueso);padding:30px 24px}
 .cifra b{display:block;font-family:var(--display);font-size:clamp(2rem,3.4vw,2.7rem);font-weight:700;color:var(--burdeos);line-height:1;letter-spacing:-.03em}
@@ -484,10 +494,24 @@ body.sin-scroll{overflow:hidden}
   .menu-movil{display:block}
   .cabecera .envoltorio{position:relative}
 }
+@media (max-width:760px){
+  /* Fotos del equipo en móvil: carrusel deslizable, altura uniforme y sin recortes */
+  .galeria-equipo{
+    --pad:26px;--alto:clamp(240px,68vw,320px);
+    gap:12px;margin:44px calc(-1 * var(--pad)) 0;padding:0 var(--pad) 10px;
+    overflow-x:auto;overscroll-behavior-x:contain;
+    scroll-snap-type:x mandatory;scroll-padding:0 var(--pad);
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  }
+  .galeria-equipo::-webkit-scrollbar{display:none}
+  .galeria-equipo figure{flex:0 0 auto;scroll-snap-align:center;width:calc(var(--alto) * var(--ratio))}
+  .galeria-equipo img{height:var(--alto)}
+}
 @media (max-width:620px){
   body{font-size:16px}
   .seccion{padding:72px 0}
   .envoltorio{padding:0 20px}
+  .galeria-equipo{--pad:20px}
   .rejilla-proyectos{grid-template-columns:1fr 1fr}
   .cifras{grid-template-columns:1fr}
   .campos{grid-template-columns:1fr}
@@ -580,6 +604,30 @@ body.sin-scroll{overflow:hidden}
         <p>Nuestra propuesta de valor va más allá de la venta. Cada proyecto que ponemos en marcha nace con unos valores claros y con la intención de aportar algo a la sociedad desde sectores muy distintos.</p>
         <p>Llevamos tres años aportando nuestro granito de arena: música, ocio, comunicación digital y acción solidaria. Cuando compras una cesta, sostienes todo eso.</p>
       </div>
+    </div>
+
+    <div class="galeria-equipo aparece">
+      <figure style="--ratio:1.3333">
+        <img src="assets/equipo-prodox-india-900.webp"
+             srcset="assets/equipo-prodox-india-480.webp 480w, assets/equipo-prodox-india-900.webp 900w"
+             sizes="(max-width:760px) 91vw, (max-width:1232px) 39vw, 476px"
+             width="900" height="675" loading="lazy" decoding="async"
+             alt="El equipo de la Asociación Junior Empresa Prodox, la asociación detrás de TuCesta, durante su viaje solidario a la India">
+      </figure>
+      <figure style="--ratio:0.775">
+        <img src="assets/equipo-prodox-costa-rica-900.webp"
+             srcset="assets/equipo-prodox-costa-rica-480.webp 480w, assets/equipo-prodox-costa-rica-900.webp 900w"
+             sizes="(max-width:760px) 53vw, (max-width:1232px) 23vw, 274px"
+             width="900" height="1161" loading="lazy" decoding="async"
+             alt="El equipo de la Asociación Junior Empresa Prodox durante su viaje universitario a Costa Rica">
+      </figure>
+      <figure style="--ratio:0.9873">
+        <img src="assets/equipo-prodox-viaje-900.webp"
+             srcset="assets/equipo-prodox-viaje-480.webp 480w, assets/equipo-prodox-viaje-900.webp 900w"
+             sizes="(max-width:760px) 67vw, (max-width:1232px) 29vw, 350px"
+             width="900" height="912" loading="lazy" decoding="async"
+             alt="El equipo al completo de la Asociación Junior Empresa Prodox, el equipo que prepara las cestas de Navidad de TuCesta">
+      </figure>
     </div>
 
     <div class="cifras aparece">

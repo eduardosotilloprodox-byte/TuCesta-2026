@@ -1,0 +1,5 @@
+# Fotos originales sin optimizar (solo se publican las WebP de assets/)
+_fotos-originales/
+# Configuración local de previsualización
+.claude/
+.DS_Store
